@@ -1,0 +1,38 @@
+"""djangoDemo2 URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/2.2/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path
+from service import views
+from django.conf.urls import url
+from djangoDemo2 import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+
+# 定义url，移动端通过这个url访问服务端
+    url(r'^users/$', views.user_api),
+    # username就是之前views中another_user_api方法中的参数
+    url(r'^users/(?P<username>[A-Za-z0-9]+)/$', views.another_user_api),
+    # 安卓端用api
+    url(r'^android_user/$', views.android_user_api),
+    # 上传图片
+    url(r'^uploadImg/$', views.uploadImages),
+    #上传视频相册
+
+    url(r'^uploading/$', views.uploadImg),
+    url(r'^showImg/$', views.showImg),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
