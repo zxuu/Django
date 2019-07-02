@@ -30,8 +30,31 @@ urlpatterns = [
     # 安卓端用api
     url(r'^android_user/$', views.android_user_api),
     # 上传图片
-    url(r'^uploadImg/$', views.uploadImages),
+    url(r'^uploadImage/$', views.uploadImages),
     #上传视频相册
+    url(r'^uploadVideo/$', views.uploadVideo),
+    url(r'^uploadFile/$', views.upLoadFile),
+    #注册
+    url(r'^register/$',views.register),
+    #登录
+    url(r'^sign/$',views.sign),
+    #评论
+    url(r'^putComment/$',views.putComment),
+    #关注
+    url(r'^putFollow/$',views.putFollow),
+
+    #获取我的视频相册
+    url(r'^getVideos/$', views.getVideos),
+    #获取我的相册集
+    url(r'^getImages/$', views.getImages),
+    #获取视频相关的用户
+    url(r'^getUser/$', views.getUser),
+    #获取视频相册对应相册集
+    url(r'^getVideoImages/$', views.getVideoImages),
+    #获取我关注的人
+    url(r'^getFollows/$', views.getFollows),
+    #//获取视频对应的评论
+    url(r'^getComments/$', views.getComments),
 
     url(r'^uploading/$', views.uploadImg),
     url(r'^showImg/$', views.showImg),

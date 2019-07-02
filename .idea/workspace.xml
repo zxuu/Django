@@ -14,24 +14,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/service/models.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/service/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="444">
+              <caret line="152" column="41" lean-forward="false" selection-start-line="152" selection-start-column="41" selection-end-line="152" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#626#1564#0" expanded="false" />
+                <element signature="e#1687#2844#0" expanded="false" />
+                <element signature="e#2901#4235#0" expanded="false" />
+                <element signature="e#4315#5235#0" expanded="false" />
+                <element signature="e#5288#5794#0" expanded="false" />
+                <element signature="e#5856#6823#0" expanded="false" />
+                <element signature="e#6883#8675#0" expanded="false" />
+                <element signature="e#7009#7133#0" expanded="false" />
+                <element signature="e#7361#7378#0" expanded="false" />
+                <element signature="e#8703#9066#0" expanded="false" />
+                <element signature="e#9127#9870#0" expanded="false" />
+                <element signature="e#9223#9240#0" expanded="false" />
+                <element signature="e#9905#10377#0" expanded="false" />
+                <element signature="e#10408#11042#0" expanded="false" />
+                <element signature="e#11066#11638#0" expanded="false" />
+                <element signature="e#11670#12099#0" expanded="false" />
+                <element signature="e#12150#13198#0" expanded="false" />
+                <element signature="e#13227#14345#0" expanded="false" />
+                <element signature="e#14370#14725#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/serializers.py">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/djangoDemo2/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="4921">
+              <caret line="133" column="10" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -39,8 +58,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/djangoDemo2/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1073">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="1406">
+              <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
               <folding>
                 <element signature="e#635#667#0" expanded="true" />
               </folding>
@@ -48,16 +67,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/views.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4440">
-              <caret line="198" column="10" lean-forward="false" selection-start-line="198" selection-start-column="10" selection-end-line="198" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <element signature="e#790#1728#0" expanded="false" />
-                <element signature="e#1851#3008#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="1850">
+              <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,12 +99,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/showImg.html" />
-        <option value="$PROJECT_DIR$/djangoDemo2/settings.py" />
         <option value="$PROJECT_DIR$/templates/imagUpload.html" />
         <option value="$PROJECT_DIR$/service/serializers.py" />
-        <option value="$PROJECT_DIR$/service/views.py" />
-        <option value="$PROJECT_DIR$/djangoDemo2/urls.py" />
+        <option value="$PROJECT_DIR$/djangoDemo2/settings.py" />
         <option value="$PROJECT_DIR$/service/models.py" />
+        <option value="$PROJECT_DIR$/djangoDemo2/urls.py" />
+        <option value="$PROJECT_DIR$/service/views.py" />
       </list>
     </option>
   </component>
@@ -100,10 +115,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2391" />
+    <option name="x" value="-9" />
     <option name="y" value="-9" />
-    <option name="width" value="1818" />
-    <option name="height" value="1093" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -140,8 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,17 +165,14 @@
             <path>
               <item name="djangoDemo2" type="b2602c69:ProjectViewProjectNode" />
               <item name="djangoDemo2" type="462c0819:PsiDirectoryNode" />
-              <item name="djangoDemo2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="djangoDemo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="djangoDemo2" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,6 +185,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Apyfile\djangoDemo2\service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Apyfile\djangoDemo2\media\videos" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -230,16 +243,25 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="2391" y="-9" width="1818" height="1093" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4457547" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14105505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281075" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41509435" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14055794" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -251,7 +273,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -284,10 +306,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/djangoDemo2/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2516">
+          <caret line="68" column="49" lean-forward="true" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/service/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -300,9 +332,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -321,9 +351,26 @@
         <state relative-caret-position="4440">
           <caret line="198" column="10" lean-forward="false" selection-start-line="198" selection-start-column="10" selection-end-line="198" selection-end-column="10" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#790#1728#0" expanded="false" />
-            <element signature="e#1851#3008#0" expanded="false" />
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#626#1564#0" expanded="false" />
+            <element signature="e#1687#2844#0" expanded="false" />
+            <element signature="e#2901#4235#0" expanded="false" />
+            <element signature="e#4315#5235#0" expanded="false" />
+            <element signature="e#5288#5794#0" expanded="false" />
+            <element signature="e#5856#6823#0" expanded="false" />
+            <element signature="e#6883#8675#0" expanded="false" />
+            <element signature="e#7009#7133#0" expanded="false" />
+            <element signature="e#7361#7378#0" expanded="false" />
+            <element signature="e#8703#9066#0" expanded="false" />
+            <element signature="e#9127#9870#0" expanded="false" />
+            <element signature="e#9223#9240#0" expanded="false" />
+            <element signature="e#9905#10377#0" expanded="false" />
+            <element signature="e#10408#11042#0" expanded="false" />
+            <element signature="e#11066#11638#0" expanded="false" />
+            <element signature="e#11670#12099#0" expanded="false" />
+            <element signature="e#12150#13198#0" expanded="false" />
+            <element signature="e#13227#14345#0" expanded="false" />
+            <element signature="e#14370#14725#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -365,9 +412,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
           <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -397,18 +442,31 @@
         <state relative-caret-position="3515">
           <caret line="138" column="19" lean-forward="true" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#790#1728#0" expanded="false" />
-            <element signature="e#1851#3008#0" expanded="false" />
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#626#1564#0" expanded="false" />
+            <element signature="e#1687#2844#0" expanded="false" />
+            <element signature="e#2901#4235#0" expanded="false" />
+            <element signature="e#4315#5235#0" expanded="false" />
+            <element signature="e#5288#5794#0" expanded="false" />
+            <element signature="e#5856#6823#0" expanded="false" />
+            <element signature="e#6883#8675#0" expanded="false" />
+            <element signature="e#7009#7133#0" expanded="false" />
+            <element signature="e#7361#7378#0" expanded="false" />
+            <element signature="e#8703#9066#0" expanded="false" />
+            <element signature="e#9127#9870#0" expanded="false" />
+            <element signature="e#9223#9240#0" expanded="false" />
+            <element signature="e#9905#10377#0" expanded="false" />
+            <element signature="e#10408#11042#0" expanded="false" />
+            <element signature="e#11066#11638#0" expanded="false" />
+            <element signature="e#11670#12099#0" expanded="false" />
+            <element signature="e#12150#13198#0" expanded="false" />
+            <element signature="e#13227#14345#0" expanded="false" />
+            <element signature="e#14370#14725#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/media/img/kk.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/media/img/kk.jpg" />
     <entry file="file://D:/Asoftware/anaconda/Lib/site-packages/django/db/models/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-957">
@@ -421,6 +479,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="121" column="8" lean-forward="false" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -483,22 +542,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/media/igg/thumbnail.jpg" />
     <entry file="file://$PROJECT_DIR$/media/igg/pp.jpg" />
-    <entry file="file://$PROJECT_DIR$/djangoDemo2/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/igg/ee.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://D:/Asoftware/anaconda/Lib/site-packages/rest_framework/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37">
           <caret line="170" column="8" lean-forward="false" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -510,37 +558,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/media/igg/cover.jpg">
+    <entry file="file://$PROJECT_DIR$/media/images/cover.jpg" />
+    <entry file="file://$PROJECT_DIR$/media/images/ee.jpg" />
+    <entry file="file://D:/Asoftware/anaconda/Lib/site-packages/django/http/response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="287" column="8" lean-forward="false" selection-start-line="287" selection-start-column="8" selection-end-line="287" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/images/u=3666553581,4143412259&amp;fm=26&amp;gp=0.jpg" />
+    <entry file="file://$PROJECT_DIR$/media/images/rr.jpg" />
+    <entry file="file://$PROJECT_DIR$/media/images/v2-4c555c734102de52bd232dd1f5420a9d.jpg" />
+    <entry file="file://$PROJECT_DIR$/media/images/v2-bf2e3734946fe594c65704c719d66f5a.jpg" />
+    <entry file="file://$PROJECT_DIR$/media/images/luoli~2.jpg" />
+    <entry file="file://$PROJECT_DIR$/media/images/f57ccb4ab2d793d7e79b0df40d99e1ef.jpg" />
+    <entry file="file://$PROJECT_DIR$/media/images/f5af1c73cf38a1c1d82064a9dd683499.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/images/f1669f77aeae1dfb2e8e5ce80ee978f1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-37">
+          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/views.py">
+    <entry file="file://$PROJECT_DIR$/media/images/IMG_20190621_174334.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/images/d8167069589fea60f008f2df982d12a9.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/images/187db61da5.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/images/f5ba5e6aae01ff73920c4cd30e1a8e6d.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoDemo2/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4440">
-          <caret line="198" column="10" lean-forward="false" selection-start-line="198" selection-start-column="10" selection-end-line="198" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#790#1728#0" expanded="false" />
-            <element signature="e#1851#3008#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="4921">
+          <caret line="133" column="10" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/djangoDemo2/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1073">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="1406">
+          <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
           <folding>
             <element signature="e#635#667#0" expanded="true" />
           </folding>
@@ -549,9 +639,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="1850">
+          <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="152" column="41" lean-forward="false" selection-start-line="152" selection-start-column="41" selection-end-line="152" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#626#1564#0" expanded="false" />
+            <element signature="e#1687#2844#0" expanded="false" />
+            <element signature="e#2901#4235#0" expanded="false" />
+            <element signature="e#4315#5235#0" expanded="false" />
+            <element signature="e#5288#5794#0" expanded="false" />
+            <element signature="e#5856#6823#0" expanded="false" />
+            <element signature="e#6883#8675#0" expanded="false" />
+            <element signature="e#7009#7133#0" expanded="false" />
+            <element signature="e#7361#7378#0" expanded="false" />
+            <element signature="e#8703#9066#0" expanded="false" />
+            <element signature="e#9127#9870#0" expanded="false" />
+            <element signature="e#9223#9240#0" expanded="false" />
+            <element signature="e#9905#10377#0" expanded="false" />
+            <element signature="e#10408#11042#0" expanded="false" />
+            <element signature="e#11066#11638#0" expanded="false" />
+            <element signature="e#11670#12099#0" expanded="false" />
+            <element signature="e#12150#13198#0" expanded="false" />
+            <element signature="e#13227#14345#0" expanded="false" />
+            <element signature="e#14370#14725#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,25 +1,18 @@
+import random
 import simplejson as simplejson
-from django.shortcuts import render
 from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import User, Img,Image
-from .serializers import UserSerializer, ImgUrlSerializer
-from rest_framework.renderers import JSONRenderer
+from .models import User, Img,Image,Video,Follow,Comment
+from .serializers import UserSerializer, ImgUrlSerializer,VideoUrlSerializer
 from djangoDemo2 import settings
 from datetime import datetime
-
-from django.http import QueryDict
-
-import json
-
-from flask import Flask, render_template, jsonify, request
-import time
 import os
-import base64
-
 from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
+
+
+
 # Create your views here.
 # 规定该方法只能通过post、get和delete请求
 @api_view(['POST', 'GET', 'DELETE'])
@@ -139,34 +132,28 @@ def android_user_api(request):
             User.objects.get(name=_data['name'][0]).delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
 
-#-----------------------------------------
+#-------------上传图片----------------------------
 def uploadImages(request):
-    print(request)
     if True:
-        sourcefiles = request.FILES['sourcefiles']
-        email = request.POST.get('email')
-        # print('email'+email)
-        image = Image()
-        image.url = email
-        str = "url="+email
-        print(type(str))
-        serializer = ImgUrlSerializer(data=QueryDict('a=1&a=2&c=3'))
+        sourcefiles = request.FILES['file']
 
-        Image.objects.create(url=email)
+        user_name = request.POST.get('myName')
+        file_name = sourcefiles.name
+        print(user_name)
+        Image.objects.create(url_image="http://192.168.0.12:8000/media/images/"+file_name,user_name=user_name,time_image="2019.6.28")
         print('sourcefiles.content_type----------------->',sourcefiles.content_type)
         if sourcefiles.content_type == 'application/octet-stream' or sourcefiles.content_type == 'image/jpeg' or sourcefiles.content_type == 'application/x-jpg' or sourcefiles.content_type == 'image/png' or sourcefiles.content_type == 'application/x-png' or sourcefiles.content_type == 'text/plain':
-            file_path = save_uploaded_file(sourcefiles, email)
+            file_path = save_uploaded_file(sourcefiles, "images")
             data = {'file_path':file_path}
     else:
         data = {'error':'没有选择上传文件'}
     a = simplejson.dumps(data)
     return HttpResponse(a, 'application/javascript')
 
-
-def save_uploaded_file(sourcefiles, email):
-    now = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
+def save_uploaded_file(sourcefiles, fileType):
+    # now = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
     filename = sourcefiles.name
-    filePath = settings.MEDIA_ROOT + "/igg/" + filename
+    filePath = settings.MEDIA_ROOT + "/"+fileType+"/" + filename
     destination = open(filePath, 'wb+')
     try:
         for chunk in sourcefiles.chunks():
@@ -175,14 +162,278 @@ def save_uploaded_file(sourcefiles, email):
         print ("save_uploaded_file----%s : %s" % (Exception, e))
     finally:
         destination.close()
+    data = {'file_path': "ok"}
+    # a = simplejson.dumps(data)
+    # return filePat
+#------------上传视频-------------
+def uploadVideo(request):
+    print(request)
+    if True:
+        sourcefiles = request.FILES['files']
+        file_name = sourcefiles.name
+        user_name = request.POST.get('myName')
+        now = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
+        Video.objects.create(url_video="http://10.0.116.20:8080/"+file_name,user_name=user_name,heart_num="5",id_video=now)
+        # print('sourcefiles.content_type----------------->',sourcefiles.content_type)
+        if sourcefiles.content_type == 'application/octet-stream' or sourcefiles.content_type == 'image/jpeg' or sourcefiles.content_type == 'application/x-jpg' or sourcefiles.content_type == 'image/png' or sourcefiles.content_type == 'application/x-png' or sourcefiles.content_type == 'text/plain':
+            file_path = save_uploaded_file(sourcefiles, "videos")
+            data = {'result':"ok"}
+    else:
+        data = {'error':'没有选择上传文件'}
+    a = simplejson.dumps(data)
+    return HttpResponse(a, 'application/javascript')
+#------------获取我的视频相册---------
+def getVideos(request):
+    userName = request.POST.get("myName")
+    u = User.objects.filter(name=userName).first()
+    userAll = User.objects.all()
+    # rr = {'name': me.name, 'tel': me.tel, 'gender': me.gender, 'declaration': me.declaration, 'back_img_url': me.back_img_url}
+    # xu = {}
+    # xu['name'] = str(me.name)
+    # xu['tel'] = str(me.name)
+    # xu['gender'] = str(me.name)
+    # xu['declaration'] = str(me.name)
+    # xu['back_img_url'] = str(me.name)
+    videos = Video.objects.all()
+    # videosList = []
+    # for video in videos:
+    #     videosList.append(video.url_video)
+    #     print(video.url_video)
+    # print(videosList)
+    # data = {'result': videosList}
+    # a = json.dumps(data)
+    # print(a)
 
-    return filePath
+    # result = {}
+    # L = []
+    # for v in videos:
+    #     v.__dict__.pop("_state")
+    #     L.append(v.__dict__)
+    # result ['videos'] = L
+
+    data = []
+    for video in videos:
+        d = {}
+        d['url_video'] = video.url_video
+        d['user_name'] = video.user_name
+        d['heart_num'] = video.heart_num
+        d['id_video'] = video.id_video
+        data.append(d)
 
 
+    userList = []
+    for user in userAll:
+        t = {}
+        t['name'] = user.name
+        t['tel'] = user.tel
+        t['gender'] = user.gender
+        t['declaration'] = user.declaration
+        t['back_img_url'] = user.back_img_url
+        userList.append(t)
+
+    dd = {}
+    dd['name'] = u.name
+    dd['tel'] = u.tel
+    dd['gender'] = u.gender
+    dd['declaration'] = u.declaration
+    dd['back_img_url'] = u.back_img_url
+
+    # a = User(me.name,me.tel,me.gender,me.declaration,me.back_img_url)
+    # mee = json.dumps(a.__dict__)
+    result = {'result':data,'me':dd,'users':userList}
+    print(result)
+    a = simplejson.dumps(result)
+
+    return HttpResponse(a, 'application/javascript')
+
+def getUser(request):
+    userName = request.POST.get("myName")
+    u = User.objects.filter(name=userName).first()
+    dd = {}
+    dd['name'] = u.name
+    dd['tel'] = u.tel
+    dd['gender'] = u.gender
+    dd['declaration'] = u.declaration
+    dd['back_img_url'] = u.back_img_url
+    result = {'me': dd}
+    a = simplejson.dumps(result)
+
+    return HttpResponse(a, 'application/javascript')
 
 
+#------------获取我的相册集---------
+def getImages(request):
+    userName = request.POST.get("myName")
+    images = Image.objects.filter(user_name=userName)
+    # imagesList = []
+    # imageTimeList = []
+    # for image in images:
+    #     imagesList.append(image.url_image)
+    #     imageTimeList.append(image.time_image)
+    # print(imagesList,imageTimeList)
+    # data = {'img_url_list': imagesList,'img_time_list':imageTimeList}
+    data = []
+    for img in images:
+        d = {}
+        d['time_image'] = img.time_image
+        d['url_image'] = img.url_image
+        d['user_name'] = img.user_name
+        d['target_video'] = img.target_video
+        data.append(d)
+    result = {'myImages':data}
+    print(result)
+    a = simplejson.dumps(result)
+    return HttpResponse(a, 'application/javascript')
 
+def getVideoImages(request):
+    videoId = request.POST.get("videoId")
+    images = Image.objects.filter(target_video=videoId)
+    data = []
+    for img in images:
+        d = {}
+        d['time_image'] = img.time_image
+        d['url_image'] = img.url_image
+        d['user_name'] = img.user_name
+        d['target_video'] = img.target_video
+        data.append(d)
+    result = {'videoImages': data}
+    print(result)
+    a = simplejson.dumps(result)
 
+    return HttpResponse(a, 'application/javascript')
+
+def getFollows(request):
+    userName = request.POST.get("myName")
+    us = Follow.objects.filter(user=userName)
+    name = []
+    for i in us:
+        name.append(i.user_target)
+    print(name)
+    data = []
+    uy = User.objects.all()
+    for u in uy:
+        # print(i.name)
+        if u.name in name:
+            dd = {}
+            dd['name'] = u.name
+            dd['tel'] = u.tel
+            dd['gender'] = u.gender
+            dd['declaration'] = u.declaration
+            dd['back_img_url'] = u.back_img_url
+            data.append(dd)
+    result = {'meFollows': data}
+    a = simplejson.dumps(result)
+    return HttpResponse(a, 'application/javascript')
+def test(request):
+    # userName = request.POST.get("myName")
+    us = Follow.objects.filter(user="zxu")
+    name = []
+    for i in us:
+        name.append(i.user_target)
+    print(name)
+    data = []
+    uy = User.objects.all()
+    for u in  uy:
+        # print(i.name)
+        dd = {}
+        dd['name'] = u.name
+        dd['tel'] = u.tel
+        dd['gender'] = u.gender
+        dd['declaration'] = u.declaration
+        dd['back_img_url'] = u.back_img_url
+        data.append(dd)
+    result = {'me': data}
+    a = simplejson.dumps(result)
+    return HttpResponse(a, 'application/javascript')
+
+def getComments(request):
+    currVideoId = request.POST.get('currentVideo')
+    comments = Comment.objects.filter(target_video=currVideoId)
+    data = []
+    for comment in comments:
+        d = {}
+        d['id'] = comment.id
+        d['content'] = comment.content
+        d['target_video'] = comment.target_video
+        data.append(d)
+    a = {'result':data}
+    aa = simplejson.dumps(a)
+    print(aa)
+    return HttpResponse(aa, 'application/javascript')
+
+#------上传文件--------
+def upLoadFile(request):
+    print(request)
+    now = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
+    sourcefiles = request.FILES.getlist('files')
+    user_name = request.POST.get('myName')
+    for source in sourcefiles:
+        (filename, extension) = os.path.splitext(source.name)
+        file_name = source.name
+        if extension == '.mp4':
+            Video.objects.create(url_video="http://10.0.116.20:8080/" + file_name, user_name=user_name,heart_num="0"
+                                 ,id_video=now+"video")
+            fn = save_uploaded_file(source, "videos")
+            # return HttpResponse(fn, 'application/javascript')
+        else:
+            a = random.randint(0, 100)
+            Image.objects.create(time_image=now+str(a),url_image="http://10.0.116.20:8000/media/images/" + file_name, user_name=user_name,
+                                 target_video=now+"video")
+            fn = save_uploaded_file(source, "images")
+            # return HttpResponse(fn, 'application/javascript')
+    return HttpResponse("result", 'application/javascript')
+
+def register(request):
+    sourcefiles = request.FILES['headPortrait']
+    userName = request.POST.get('user_Name')
+    userTel = request.POST.get('user_Tel')
+    userPassWord = request.POST.get('user_PassW')
+    userGender = request.POST.get('user_Gender')
+    userDeclaration = request.POST.get('user_Dec')
+    category = request.POST.get('category')
+    if category == "0":
+        if sourcefiles.content_type == 'application/octet-stream' or sourcefiles.content_type == 'image/jpeg' or sourcefiles.content_type == 'application/x-jpg' or sourcefiles.content_type == 'image/png' or sourcefiles.content_type == 'application/x-png' or sourcefiles.content_type == 'text/plain':
+            save_uploaded_file(sourcefiles, "images")
+            User.objects.create(name=userName, tel=userTel, gender=userGender
+                                , declaration=userDeclaration, back_img_url=settings.imagesPath + sourcefiles.name
+                                , pass_word=userPassWord)
+            data = {'result': "ok"}
+    else:
+        data = {'result': "fail"}
+    a = simplejson.dumps(data)
+    return HttpResponse(a, 'application/javascript')
+
+def sign(request):
+    userName = request.POST.get('user_Name')
+    userPassWord = request.POST.get('user_PassW')
+    realUsere = User.objects.get(name=userName)
+    if realUsere.pass_word == userPassWord:
+        data = {'result': "ok"}
+    else:
+        data = {'result': "fail"}
+    a = simplejson.dumps(data)
+    print(a)
+    return HttpResponse(a, 'application/javascript')
+
+def putComment(request):
+    now = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
+    targetVideo = request.POST.get('currentVideo')
+    content = request.POST.get('content')
+    Comment.objects.create(id=now,content=content,target_video=targetVideo)
+    data = {'result':"ok"}
+    a = simplejson.dumps(data)
+    print(a)
+    return HttpResponse(a, 'application/javascript')
+
+def putFollow(request):
+    now = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
+    me = request.POST.get('myName')
+    tarName = request.POST.get('targetName')
+    Follow.objects.create(id=now,user=me,user_target=tarName)
+    data = {'result': "ok"}
+    a = simplejson.dumps(data)
+    print(a)
+    return HttpResponse(a, 'application/javascript')
 
 
 
