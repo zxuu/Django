@@ -435,16 +435,20 @@ def putFollow(request):
     print(a)
     return HttpResponse(a, 'application/javascript')
 
-
-
-
-
-
-
-
-
-
-
+def putDianZan(request):
+    tarVideo = request.POST.get('targetVideo')
+    label = request.POST.get('label')
+    video = Video.objects.get(id_video=tarVideo)
+    if label == "1":
+        video.heart_num = video.heart_num + 1
+        video.save()
+        data = {'result': "谢谢喜欢"}
+    else:
+        video.heart_num = video.heart_num - 1
+        video.save()
+        data = {'result': "不喜欢"}
+    a = simplejson.dumps(data)
+    return HttpResponse(a, 'application/javascript')
 
 
 def uploadImg(request): # 图片上传函数

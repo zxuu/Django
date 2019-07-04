@@ -33,7 +33,7 @@ class Image(models.Model):
 class Video(models.Model):
     url_video = models.CharField(max_length=255)
     user_name = models.CharField(max_length=255)
-    heart_num = models.CharField(max_length=30)
+    heart_num = models.IntegerField(max_length=30)
     id_video =  models.CharField(max_length=255,primary_key='True')
     class Meta:
         db_table = 'Video'

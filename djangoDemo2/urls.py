@@ -42,6 +42,8 @@ urlpatterns = [
     url(r'^putComment/$',views.putComment),
     #关注
     url(r'^putFollow/$',views.putFollow),
+    #点赞
+    url(r'^putDianZan/$',views.putDianZan),
 
     #获取我的视频相册
     url(r'^getVideos/$', views.getVideos),
